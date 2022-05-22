@@ -5,7 +5,5 @@ using UnityEngine.Events;
 
 public class GlobalEvents : MonoBehaviour
 {
-    public static UnityEvent OffPause;
-
-
+    public static UnityEvent OffPause = new UnityEvent();
 }

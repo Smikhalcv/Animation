@@ -14,12 +14,12 @@ public class MoveCamera : MonoBehaviour
     {
         _magmaBall = GameObject.FindGameObjectWithTag("MagmaBall");
     }
+
     private void LateUpdate()
     {
         _cameraPos = _magmaBall.transform.position;
         _cameraPos.z -= _distanceToBall;
-        _cameraPos.y += _heigthAboveBall;
-       
+        _cameraPos.y += _heigthAboveBall;       
         transform.position = _cameraPos;
     }
 }

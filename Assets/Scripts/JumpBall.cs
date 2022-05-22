@@ -21,8 +21,7 @@ public class JumpBall : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _anim.SetBool("Jump", true);
-        }
-        
+        }        
     }
 
     private void OnCollisionEnter(Collision collision)

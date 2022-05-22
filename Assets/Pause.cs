@@ -15,30 +15,19 @@ public class Pause : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        _button.onClick.AddListener(GamePause);
-        
+        _button.onClick.AddListener(GamePause);        
     }
 
     private void Start()
     {
-
-
         GlobalEvents.OffPause.AddListener(TurnOffPause);
     }
 
-    
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-/*        if (_pauseMune.isActiveAndEnabled)
-        {
-            _button.interactable = false;
-        }
-        else
-        {
-            _button.interactable = true;
-        }*/
+        Time.timeScale = 1;
     }
+
 
     private void GamePause()
     {

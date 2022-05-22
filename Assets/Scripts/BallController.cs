@@ -6,14 +6,11 @@ public class BallController : MonoBehaviour
 {
     [SerializeField] private float _speed, _step;
     [SerializeField] private float _speedRot;
-    private Vector3 _currentPos, _targetPos;
-    private Quaternion _currentRot;
     private Rigidbody _rb;
 
 
     void Start()
     {
-        _targetPos = transform.position;
         _rb = gameObject.GetComponent<Rigidbody>();
     }
 
