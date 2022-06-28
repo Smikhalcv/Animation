@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3160278786119490719}
   - component: {fileID: 3007267926295692525}
-  - component: {fileID: 1889320845914520691}
+  - component: {fileID: 6515469260986099013}
+  - component: {fileID: 6518371345892862544}
   m_Layer: 0
   m_Name: MagmaBall
   m_TagString: MagmaBall
@@ -49,7 +50,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1889320845914520691
+--- !u!114 &6515469260986099013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,12 +59,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 3160278786119490718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9d3e65b77d4a1444aeb929a7143533d, type: 3}
+  m_Script: {fileID: 11500000, guid: 47a29ff075fe4b049875225e3e450114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 400
-  _step: 0.5
-  _speedRot: 0
+--- !u!114 &6518371345892862544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160278786119490718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c0632abcedf084a80a5224190773c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3160278786119762548
 GameObject:
   m_ObjectHideFlags: 0

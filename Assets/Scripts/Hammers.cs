@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class Hammers : MonoBehaviour
 {
     private Animator _animator;
@@ -12,12 +13,6 @@ public class Hammers : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void SelectState(string state)

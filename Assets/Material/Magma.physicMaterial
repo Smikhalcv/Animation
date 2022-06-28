@@ -7,8 +7,8 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Magma
-  dynamicFriction: 100
-  staticFriction: 30
+  dynamicFriction: 10
+  staticFriction: 5
   bounciness: 0.1
   frictionCombine: 3
   bounceCombine: 0

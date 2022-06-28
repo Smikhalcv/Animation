@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    private GameObject _magmaBall;
-    private Vector3 _cameraPos;
-    [SerializeField] private float _step;
-    [SerializeField] private float _distanceToBall;
-    [SerializeField] private float _heigthAboveBall;
+    [SerializeField] private Transform _ballTransform;
+    private Vector3 _distance;
+    
 
     private void Start()
     {
-        _magmaBall = GameObject.FindGameObjectWithTag("MagmaBall");
+        _distance = transform.position - _ballTransform.position;
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
-        _cameraPos = _magmaBall.transform.position;
-        _cameraPos.z -= _distanceToBall;
-        _cameraPos.y += _heigthAboveBall;       
-        transform.position = _cameraPos;
+        transform.position = _ballTransform.position + _distance;
     }
 }
