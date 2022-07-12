@@ -767,6 +767,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!198 &1819041343 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3427773202414248940, guid: 9e91ad5a691e99649a104b729587589b, type: 3}
+  m_PrefabInstance: {fileID: 6140097974415981392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1900195191 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2029263012714544892, guid: 666c485cbffa8554385740d42d9b69bb, type: 3}
@@ -1585,10 +1590,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3238777978010946700, guid: 9e91ad5a691e99649a104b729587589b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6140097974286101168, guid: 9e91ad5a691e99649a104b729587589b, type: 3}
       propertyPath: _object
       value: 
       objectReference: {fileID: 4520409767351509908}
+    - target: {fileID: 6140097974286101168, guid: 9e91ad5a691e99649a104b729587589b, type: 3}
+      propertyPath: _effectPress
+      value: 
+      objectReference: {fileID: 1819041343}
     - target: {fileID: 6140097974286101168, guid: 9e91ad5a691e99649a104b729587589b, type: 3}
       propertyPath: _massegeForPlayer
       value: 

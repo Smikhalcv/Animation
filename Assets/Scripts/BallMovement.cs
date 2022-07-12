@@ -8,16 +8,10 @@ public class BallMovement : MonoBehaviour
     private Rigidbody _rgBall;
     [SerializeField, Range(100, 500)]
     private float _speed = 300f;
-    private Vector3 _startPosition;
-
-    private void Awake()
-    {
-        GlobalEvents.HitToPlayer.AddListener(SkipPlayer);
-    }
-
+    
+    
     private void Start()
     {
-        _startPosition = transform.position;
         _rgBall = GetComponent<Rigidbody>();
     }
 
@@ -26,10 +20,7 @@ public class BallMovement : MonoBehaviour
         _rgBall.AddForce(direction * _speed);
     }
 
-    private void SkipPlayer()
-    {
-        transform.position = _startPosition;
-    }
+
 
 #if UNITY_EDITOR
     [ContextMenu("Reset Speed")]

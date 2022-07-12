@@ -918,7 +918,9 @@ PrefabInstance:
       propertyPath: _speed
       value: 350
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2950539799969976931, guid: e9fba5879af9b5f4a95d4b71f075003f, type: 3}
+    - {fileID: 5786477156039326693, guid: e9fba5879af9b5f4a95d4b71f075003f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e9fba5879af9b5f4a95d4b71f075003f, type: 3}
 --- !u!4 &911289304 stripped
 Transform:

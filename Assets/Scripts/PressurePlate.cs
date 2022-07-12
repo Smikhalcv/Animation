@@ -11,6 +11,7 @@ namespace GlobalString
     {
         [SerializeField] private Text _massegeForPlayer;
         [SerializeField] private GameObject _object;
+        [SerializeField] ParticleSystem _effectPress;
 
         private void Start()
         {
@@ -23,8 +24,13 @@ namespace GlobalString
             if (collision.gameObject.CompareTag(GlobalStringVars.TagPlayer))
             {
                 _massegeForPlayer.text = "E";
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && !_object.activeInHierarchy)
+                {
                     _object.SetActive(true);
+                    _effectPress.Play();
+                }
+
+                    
             }            
         }
 
