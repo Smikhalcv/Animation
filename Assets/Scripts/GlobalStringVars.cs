@@ -9,6 +9,7 @@ namespace GlobalString
         public static string Vertical = "Vertical";
         public static string Horizontal = "Horizontal";
         public static string TagPlayer = "MagmaBall";
+        public static string Counter = "Counter";
     }
 }
 

@@ -2,28 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowingWall : MonoBehaviour
-{
-    private Animator _anim;
-
-    private void Start()
+namespace GlobalString 
+{    public class GrowingWall : MonoBehaviour
     {
-        _anim = GetComponentInChildren<Animator>();   
-    }
+        private Animator _anim;
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("MagmaBall"))
+        private void Start()
         {
-            _anim.SetBool("NearBall", true);
+            _anim = GetComponentInChildren<Animator>();
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("MagmaBall"))
+        private void OnTriggerStay(Collider other)
         {
-            _anim.SetBool("NearBall", false);
+            if (other.gameObject.CompareTag(GlobalStringVars.TagPlayer))
+            {
+                _anim.SetBool("NearBall", true);
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.CompareTag(GlobalStringVars.TagPlayer))
+            {
+                _anim.SetBool("NearBall", false);
+            }
         }
     }
 }
+

@@ -36,6 +36,4 @@ public class DeadPlayer : MonoBehaviour
     {
         StartCoroutine(SkipPlayer());
     }
-
-    //delete ball - active particle - move ball
 }

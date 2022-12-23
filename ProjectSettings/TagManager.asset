@@ -6,6 +6,9 @@ TagManager:
   tags:
   - MagmaBall
   - Ground
+  - Music
+  - Portal
+  - Counter
   layers:
   - Default
   - TransparentFX

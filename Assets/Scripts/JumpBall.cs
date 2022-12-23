@@ -28,7 +28,6 @@ public class JumpBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("Ground");
             _anim.SetBool("Jump", false);
         }
     }

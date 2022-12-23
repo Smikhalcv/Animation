@@ -9,28 +9,31 @@ public class Hammers : MonoBehaviour
     private string _selectedState;
     private string[] _arrayStates = new string[] { "State1", "State2", "State3"};
 
+    private void Awake()
+    {
+        GlobalEvents.HitToPlayer.AddListener(StopAnimation);
+    }
 
     void Start()
     {
         _animator = GetComponent<Animator>();
     }
 
-    private void SelectState(string state)
+    private void SelectState()
     {
-        _animator.SetBool(state, true);
+        _animator.SetBool(_selectedState, true);
     }
 
-    private void StopAnimation(string state)
+    public void StopAnimation()
     {
-        _animator.SetBool(state, false);
+        _animator.SetBool(_selectedState, false);
     }
 
     private void RandomState()
     {
         System.Random rnd = new System.Random();
         _selectedState = _arrayStates[rnd.Next(_arrayStates.Length)];
-        Debug.Log(_selectedState);
-        SelectState(_selectedState);
+        SelectState();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,6 +45,6 @@ public class Hammers : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("MagmaBall"))
-            StopAnimation(_selectedState);
+            StopAnimation();
     }
 }
